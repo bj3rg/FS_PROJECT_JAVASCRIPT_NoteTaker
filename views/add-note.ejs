@@ -1,7 +1,21 @@
 <%- include("partials/header.ejs") %>
 
-    <div>
-        <h1>THIS IS NOTE PAGE</h1>
+    <div class="main-add-note-container">
+        <button class="back-btn" onclick="backToNote()"> BACK TO HOME</button>
+        <div class="add-note-container">
+            <h1>Add Technology</h1>
+            <form action="/create/technology" method="post">
+                <label for="name">Stack:</label>
+                <input type="text" name="name" id="name" placeholder="Example: Node.JS">
+                <label for="lang_origni">Stack Origin:</label>
+                <input type="text" name="lang_origin" id="lang_origin" placeholder="Example: JavaScript">
+                <select name="category" id="category">
+                    <option value="BACKEND">BACKEND</option>
+                    <option value="FRONTEND">FRONTEND</option>
+                </select>
+                <input id="submit_tech" type="submit" value="ADD">
+            </form>
+        </div>
     </div>
 
     <%- include("partials/footer.ejs") %>
