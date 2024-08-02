@@ -6,8 +6,44 @@
     </div>
 </footer>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    function addNote() {
+        document.getElementById("add-note-container").removeAttribute("hidden")
+        document.getElementById("add-note-btn").setAttribute("hidden", true)
+    }
+
+    function showButton() {
+        document.getElementById("add-note-btn").removeAttribute("hidden")
+        document.getElementById("add-note-container").setAttribute("hidden", true)
+        if (document.getElementById("title").val = "") {
+            console.log("Empty")
+        }
+    }
+
+    function addTechnology() {
+        window.location.href = "/create/technology"
+    }
+
+    $(function () {
+        $(document).ready(function () {
+            $(".notes-item").mouseover(function () {
+                $("#a").removeAttr('hidden')
+            })
+        }, function () {
+            $(".notes-item").mouseout(function () {
+                $("#a").setAttribute('hidden', true)
+            })
+
+        })
+    })
+    function backToNote() {
+        window.location.href = "/note"
+    }
 
 
+
+</script>
 </body>
 
 </html>
