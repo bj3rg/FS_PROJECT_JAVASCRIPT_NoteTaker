@@ -1,0 +1,10 @@
+body {
+  background-color: #7ec4cf;
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}

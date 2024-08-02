@@ -1,0 +1,31 @@
+<%- include("partials/header.ejs") %>
+
+    <div>
+        <div>
+            <form action="/technology">
+                <input type="submit" name="technology" value="Node.JS">
+                <input type="submit" name="technology" value="React.JS">
+                <input type="submit" name="technology" value="Angular.JS">
+                <input type="submit" name="technology" value="Nest.JS">
+            </form>
+
+            <div>
+                <h1>Technology: React.JS</h1>
+                <h3>Language: Javascript</h3>
+                <div>
+                    <h1>Title: This is a note.</h1>
+                    <p>Description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt debitis minus
+                        eligendi commodi assumenda perferendis itaque at fuga libero praesentium magni facilis quos
+                        labore quasi, animi molestias nulla. Omnis, perferendis.</p>
+                    <p>
+                        <% new Date() %>
+                    </p>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <%- include("partials/footer.ejs") %>

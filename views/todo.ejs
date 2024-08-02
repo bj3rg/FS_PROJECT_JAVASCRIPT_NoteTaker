@@ -1,0 +1,73 @@
+<%- include("partials/header.ejs") %>
+
+    <div class="main-todo-container">
+        <div class="right-container">
+            <div>
+                <div>
+                    <h1>Todo list for today <%= new Date().getFullYear() %>
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="left-container">
+            <div class="date-container">
+                <div>
+                    <h1>
+                        March 2, 2024, Monday, Philippines
+                    </h1>
+                </div>
+                <div>
+                    <% if(locals.todo) {%>
+                        <% todo.forEach(list=> { %>
+                            <ul>
+                                <li>
+                                    <p>title: Magcode<%= list.title %>
+                                    </p>
+                                    <p>description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
+                                        deserunt,
+                                        est, odit consectetur, at similique animi quibusdam asperiores neque aliquam
+                                        ducimus!
+                                        Quos error doloremque voluptatum eum illum modi impedit deleniti?<%=
+                                            list.description %>
+                                    </p>
+                                    <p>day: August 2, 2024<%= list.date %>
+                                    </p>
+                                </li>
+                            </ul>
+                            <% }) %>
+                                <% } %>
+                </div>
+            </div>
+            <div class="history-container">
+                <div class="history-title">
+                    <h1>History list</h1>
+                </div>
+                <div class="history-list">
+                    <form action=""></form>
+                    <% if(locals.history){ %>
+                        <% history.forEach(item=> { %>
+                            <ul>
+                                <li>
+                                    <p>title: Magcode<%= item.title %>
+                                    </p>
+                                    <p>description: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
+                                        deserunt,
+                                        est, odit consectetur, at similique animi quibusdam asperiores neque aliquam
+                                        ducimus!
+                                        Quos error doloremque voluptatum eum illum modi impedit deleniti?<%=
+                                            item.description %>
+                                    </p>
+                                    <p>day: August 2, 2024<%= item.date %>
+                                    </p>
+                                </li>
+                            </ul>
+                            <% }) %>
+                                <% } %>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include("partials/footer.ejs") %>
